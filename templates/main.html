@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
+    <head>
+        
+    </head>
+    
+    
+    <body>
+        <nav class="nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="#"><img src="static\css\logo.png", height=60px/></a>
+                </div>
+                <div id="mainListDiv" class="main_list">
+                    <ul class="navlinks">
+                        <li><a href="{{url_for('home')}}"><b>Home</b></a></li>
+                        <li><a href="#"><b>About our Model</b></a></li>
+                        <li><a href="#"><b>API info</b></a></li>
+                        <li><a href="#"><b>Contact Us</b></a></li>
+                        
+                    </ul>
+                </div>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+        </nav>
+    
+        <section class="home" background-image = "bg_img.jpg">
+        </section>
+        <div style="height: 1550px">
+            <!-- just to make scrolling effect possible -->
+                <h2 class="myH2"><i><span style="color: lightgreen">See</span><span style = "color: #ffd500;">Food</span></i></h2>
+                <p class="myP">Foodie day to everyone here! We understand the pain everyone goes through when there is a delicious dish around the corner or on the table next to you.
+                    We definitely want to know what it is don't we? What if we can solve this issue? You are at the right place. Click a photo and know everything there is to know about this dish.
+                    All the nutritonal values, its history and even recipes of that dishes from the top food blogs and websites all in one place. We can differentiate between 11 different types of food categories.
+                    They are all the most famous ones out there and the most commonly searched ones. Our machine learning model gives the most accurate results for your that mystery food.
+                    Later on, our web scrapper goes live and gets you the most delicious recipes for you and ends your search for this on multiple platforms!
+                    Isnt this cool? Many people have tried this and are thrilled by this, well atleast we can rest easy knowing that people don't go to sleep pondering, what was THAT dish.</p>
+                    <br>
+                    <p class="myP">As you guessed correctly, it is inspired by our very own Jian-Yang's Hotdog app.</p>
+                <p class="myP"><b>Wondering how to use our platform? Here's how you can understand our product:</b></p>
+                <p></p>
+                <br>
+                <br>
+                
+                
+                <img src = "static\css\main_page_video.gif" style = "margin-left: 510px;">
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class="myP">WE HOPE YOU FIND THIS USEFUL</p>
+                <p class="myP"></p>
+                    <p class="myP">
+                </p>
+        </div>
+        <div style = "height: 100px;">
+            <a href = "{{url_for('classifier')}}">
+                <button class="button-24" role="button" style="margin-left: 720px;" >Lets Go!!</button>
+            </a>
+        </div>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/scripts.js"></script>
+    
+        <script>
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 50) {
+                    $('.nav').addClass('affix');
+                    console.log("OK");
+                } else {
+                    $('.nav').removeClass('affix');
+                }
+            });
+        </script>
+    
+    <footer style="height: 140px">
+        <div class="footer">
+        <div class="row">
+        <a href="https://www.facebook.com/profile.php?id=100010519366969"><i class="fa fa-facebook" style="height: 20px;"></i></a>
+        <a href="https://www.instagram.com/jehan_d11/"><i class="fa fa-instagram"></i></a>
+        <a href="https://media.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif"><i class="fa fa-youtube"></i></a>
+        <a href="https://twitter.com/Desai11Jehan"><i class="fa fa-twitter"></i></a>
+        </div>
+        
+        <div class="row">
+        <ul>
+        <li style = "font-size: medium;"><a href="#">Contact us</a></li>
+        <li style = "font-size: medium;"><a href="#">Our Services</a></li>
+        <li style = "font-size: medium;"><a href="#">Privacy Policy</a></li>
+        <li style = "font-size: medium;"><a href="#">Terms & Conditions</a></li>
+        <li style = "font-size: medium;"><a href="#">Our product</a></li>
+        </ul>
+        </div>
+        </div>
+        </div>
+    </footer>
+
+    </body>
+</html>
