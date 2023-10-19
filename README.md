@@ -1,0 +1,2 @@
+# SeeFood
+Welcome to SeeFood, a web application that lets you explore the world of food through the eyes of machine learning! With SeeFood, you can upload pictures of your favorite dishes, and our powerful InceptionV3-based machine learning model will predict the food class. Whether you're a food enthusiast, a curious cook, or just looking to have some fun, SeeFood is here to satisfy your appetite for knowledge.
