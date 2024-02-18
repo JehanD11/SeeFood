@@ -1,0 +1,35 @@
+body {
+    background-image: linear-gradient(to top right, #bb00ff, #ba04cb);
+    height : fit-content;
+}
+nav {
+    width: 100%;
+}
+.topnav {
+    background-color: black;
+    text-align: center;
+}
+
+
+#imagePreview {
+    max-width: 500px;
+    max-height: 500px;
+}
+#selectImageButton, #submitButton{
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+#titleFontSee {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color : rgb(17, 190, 17);
+    font-size : 75px";
+}
+#titleFontFood {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color : rgb(236, 47, 26);
+    font-size : 75px";
+}
