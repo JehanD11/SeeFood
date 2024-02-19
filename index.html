@@ -13,47 +13,52 @@
             <a href = "#">Content</a>
         </nav>
     </div>
-    
-    <h1><span id = "titleFontSee">See</span><span id = "titleFontFood">Food!</span></h1>
-    <button id="selectImageButton">Select an Image</button>
+    <div style = "text-align: center;">
+        <img src="bg-img.jpg" style = "opacity: 0.5;">
+    </div>
+    <div style = "text-align: center;">
+        <h1><span id = "titleFontSee">See</span><span id = "titleFontFood">Food!</span></h1>
+        <button id="selectImageButton">Select an Image</button>
 
-    <!-- Hidden file input -->
-    <input type="file" id="imageInput" accept="image/*" style="display: none;">
+        <!-- Hidden file input -->
+        <input type="file" id="imageInput" accept="image/*" style="display: none;">
 
-    <br>
-    <img id="imagePreview">
+        <br>
+        <img id="imagePreview">
 
-    <!-- Submit button -->
-    <br>
-    <button id="submitButton" style="display: none; ">Submit</button>
+        <!-- Submit button -->
+        <br>
+        <button id="submitButton" style="display: none; ">Submit</button>
 
-    <script>
-        document.getElementById('selectImageButton').addEventListener('click', function () {
-            document.getElementById('imageInput').click();
-        });
+        <script>
+            document.getElementById('selectImageButton').addEventListener('click', function () {
+                document.getElementById('imageInput').click();
+            });
 
-        function handleFileSelect() {
-            var fileInput = document.getElementById('imageInput');
-            var imagePreview = document.getElementById('imagePreview');
-            var submitButton = document.getElementById('submitButton');
+            function handleFileSelect() {
+                var fileInput = document.getElementById('imageInput');
+                var imagePreview = document.getElementById('imagePreview');
+                var submitButton = document.getElementById('submitButton');
 
-            var file = fileInput.files[0];
+                var file = fileInput.files[0];
 
-            if (file) {
-                var reader = new FileReader();
+                if (file) {
+                    var reader = new FileReader();
 
-                reader.onload = function (e) {
-                    imagePreview.src = e.target.result;
-                    submitButton.style.display = 'block';
-                };
+                    reader.onload = function (e) {
+                        imagePreview.src = e.target.result;
+                        submitButton.style.display = 'block';
+                    };
 
-                reader.readAsDataURL(file);
+                    reader.readAsDataURL(file);
+                }
             }
-        }
 
-        // Attach the event listener to the file input
-        document.getElementById('imageInput').addEventListener('change', handleFileSelect);
-    </script>
+            // Attach the event listener to the file input
+            document.getElementById('imageInput').addEventListener('change', handleFileSelect);
+        </script>
+    </div>
+    
 
 </body>
 </html>
