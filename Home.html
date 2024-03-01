@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "temp.css">
+
+    <title>Image Classification</title>
+</head>
+<body>
+    <div class="topnav">
+        <nav>
+            <a href = "#">Home</a>
+            <a href = "#">About me</a>
+            <a href = "#">Inspiration</a>
+            <a href = "#">Top recipes</a>
+        </nav>
+    </div>
+    <div style = "margin-top: 100px">
+        <form id="upload-form" action="/classify" method="post" enctype="multipart/form-data">
+            <div id="upload-btn">Upload Image</div>
+            <input type="file" name="image" id="upload-input" accept="image/*" style="display: none;">
+            <img src="https://via.placeholder.com/300x300?text=Image" alt="Image Preview" id="image-preview">
+            <button class="btn" id="submit-btn" type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        const uploadBtn = document.getElementById('upload-btn');
+        const uploadInput = document.getElementById('upload-input');
+        const imagePreview = document.getElementById('image-preview');
+        const submitBtn = document.getElementById('submit-btn');
+
+        uploadBtn.addEventListener('click', () => {
+            uploadInput.click();
+        });
+
+        uploadInput.addEventListener('change', () => {
+            const file = uploadInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                    submitBtn.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
